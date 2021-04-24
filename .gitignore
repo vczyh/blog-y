@@ -1,3 +1,9 @@
+# ide
 .idea/
+
+# build
 bin
+
+# log
+logs
 *.log

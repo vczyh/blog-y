@@ -15,6 +15,7 @@ func New(host string, port int, user, password, dbname string) (*gorm.DB, error)
 
 func NewWithDSN(dsn string) (*gorm.DB, error) {
 	return gorm.Open(mysql.Open(dsn), &gorm.Config{
+		//DisableForeignKeyConstraintWhenMigrating: true,
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: true, // 使用单数表名，启用该选项后，`User` 表将是`user`
 		},
